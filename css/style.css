@@ -1,0 +1,178 @@
+:root {
+    --light-gray: #D5D9D8; /* Light Gray */
+    --very-light-cream: #FBF9F6; /* Very Light Cream */
+    --muted-rose: #AEB8BA; /* Muted Rose */
+    --cool-gray: #88989C; /* Cool Gray */
+    --dark-teal: #61777E; /* Dark Teal */
+    --deep-charcoal: #3B5760; /* Deep Charcoal */
+    --white: #ffffff; /* Deep Charcoal */
+    --dark-slate: #143642; /* Dark Slate */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Lora', serif;
+   
+}
+
+body {
+   
+    background-color: var(--very-light-cream);
+    font-family: var(--font-body);
+}
+a:hover {
+    color: none;
+    text-decoration: none;
+}
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--deep-charcoal);
+}
+
+.btn-primary {
+    background-color: var(--dark-teal);
+    color: white; /* For button text */
+    border: none;
+}
+.btn-primary:hover {
+    background-color: var(--dark-slate);
+}
+footer {
+    background-color: var(--dark-slate);
+    color: var(--very-light-cream);
+    padding: 20px 0;
+}
+
+.footer-links a {
+    color: var(--muted-rose);
+}
+
+.nav-title{
+    display: flex !important;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+.hero {
+    /* margin-left: 2rem;
+    margin-right: 2rem; */
+    position: relative;
+    color: white; /* Adjust text color for contrast */
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Center text */
+    background: 
+      linear-gradient(rgba(20, 54, 66, 0.8), rgba(20, 54, 66, 0.5)), /* Updated color */
+      url("/images/hero-bg.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+/* .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+} */
+
+.hero-content {
+    position: relative; /* Position content above the overlay */
+    z-index: 4; /* Ensure content is above the overlay */
+    text-align: center; /* Center the text, adjust as needed */
+    padding: 20px; /* Add padding for better spacing */
+}
+.hero-content > h1{
+    color: var(    --white);
+
+}
+
+.price-table {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Make the card full height */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.price-table:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.highlight {
+    border: 2px solid #007bff; /* Highlight color */
+    box-shadow: 0 8px 30px rgba(0, 123, 255, 0.3);
+}
+
+.plan-price {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.card-body {
+    flex: 1; /* Allow body to grow */
+    display: flex;
+    flex-direction: column;
+     justify-content: space-between;/* Space out content */
+}
+.services {
+    /* background-color: #f8f9fa; Light background */
+    background-color: var(--muted-rose);
+    /* border-radius: 10px; Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.section-title {
+    font-size: 2.5rem; /* Larger title */
+    margin-bottom: 1.5rem; /* Space below title */
+    color: #143642; /* Color for the title */
+}
+
+.service-item {
+    position: relative; /* Needed for absolute positioning of the pseudo-element */
+    overflow: hidden; /* Prevent overflow of the pseudo-element */
+}
+
+.service-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+ /*   left: 50%;  Start in the center */
+    width: 0; /* Initially 0 width */
+    height: 2px; /* Height of the border */
+    background-color: var(--dark-slate); /* Color of the border */
+    transition: width 0.5s ease, transform 0.5s ease; /* Animate width and position */
+   /* transform: translateX(-50%);  Center the element initially */
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    transition: width 0.5s ease, transform 0.5s ease; /* Animate width and position */
+
+}
+
+.service-item:hover::before {
+    width: 70%; /* Expand to desired width */
+   /* transform: translateX(-50%);  Keep it centered */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15); /* Optional shadow effect */
+}
+
+
+.service-item h3 {
+    font-size: 1.5rem; /* Font size for service titles */
+    color: #143642; /* Consistent color for titles */
+}
+
+.service-item p {
+    color: #555; /* Softer text color for descriptions */
+}
+
+.custom-row-gap{
+    row-gap: 1rem;
+}
