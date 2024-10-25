@@ -15,6 +15,21 @@ function openWhatsApp(plan) {
 
     // window.open(link, '_blank');
 }
+
+// Function to increase image size
+function enlargeImg() {
+    const img = document.getElementById("img1"); // Get the img object using its Id
+    img.style.transform = "scale(1.5)"; // Set image size to 1.5 times original
+}
+
+// Function to reset image size
+function resetImg() {
+    const img = document.getElementById("img1"); // Get the img object again
+    img.style.transform = "scale(1)"; // Set image size to original
+}
+
+
 $(function () {
     $('[data-toggle="tooltip"]').tooltip(); // Initialize tooltips
 });
+
