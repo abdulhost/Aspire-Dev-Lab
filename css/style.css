@@ -180,3 +180,43 @@ footer {
 .custom-row-gap{
     row-gap: 1rem;
 }
+
+.cstm-gallery{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cstm-img-box{
+    width: 50px;
+    height: 200px;
+    margin: 4px;
+    border-radius: 8px;
+    background: url('/images/renal-warrior.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: width 0.5s;
+
+}
+
+.cstm-img-box:nth-child(2){
+    background: url('/images/flaxen.png');
+    background-size: cover;
+    background-position: center;
+}
+.cstm-img-box:nth-child(3){
+    background: url('/images/flaxen.png');
+    background-size: cover;
+    background-position: center;
+}
+/* .cstm-img-box:hover{
+    width: 300px;
+    cursor: pointer;
+} */
+
+.cstm-img-box.expand {
+    /* opacity: 1; */
+    width: 300px;
+    cursor: pointer;
+}

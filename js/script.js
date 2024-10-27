@@ -16,19 +16,44 @@ function openWhatsApp(plan) {
     // window.open(link, '_blank');
 }
 
-// Function to increase image size
-function enlargeImg() {
-    const img = document.getElementById("img1"); // Get the img object using its Id
-    img.style.transform = "scale(1.5)"; // Set image size to 1.5 times original
+function onClick(element) {
+    // Get the background image using getComputedStyle
+    var bgImage = window.getComputedStyle(element).backgroundImage;
+
+    // Extract the URL from the background-image string
+    var imageUrl = bgImage.replace(/url\(["']?/, '').replace(/["']?\)/, '');
+
+    // Set the src of the modal image to the extracted URL
+    document.getElementById("img01").src = imageUrl;
+    document.getElementById("modal01").style.display = "block";
 }
+$(document).ready(function() {
+    // Set the first image box to be expanded by default
+    $(".cstm-img-box:first").addClass("expand");
 
-// Function to reset image size
-function resetImg() {
-    const img = document.getElementById("img1"); // Get the img object again
-    img.style.transform = "scale(1)"; // Set image size to original
-}
+    $(".cstm-img-box").mouseover(function() {
+        $(".cstm-img-box").removeClass("expand");
+        $(this).addClass("expand");
+    });
 
+    $(".cstm-img-box").mouseout(function() {
+        // Check if the mouse is not over any image box and reapply expand to the first box
+        if ($(".cstm-img-box.expand").length === 0) {
+            $(".cstm-img-box:first").addClass("expand");
+        }
+    });
 
+    // Ensure the first box is expanded when the mouse leaves the gallery
+    $(".cstm-gallery").mouseleave(function() {
+        $(".cstm-img-box").removeClass("expand");
+        $(".cstm-img-box:first").addClass("expand");
+    });
+});
+// function onClick(element) {
+//     document.getElementById("img01").src = element.src;
+//     document.getElementById("modal01").style.display = "block";
+//   }
+  
 $(function () {
     $('[data-toggle="tooltip"]').tooltip(); // Initialize tooltips
 });
