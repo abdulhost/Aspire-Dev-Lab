@@ -28,25 +28,34 @@ function onClick(element) {
     document.getElementById("modal01").style.display = "block";
 }
 $(document).ready(function() {
-    // Set the first image box to be expanded by default
-    $(".cstm-img-box:first").addClass("expand");
+    $(".cstm-gallery").each(function() {
+        // Set the background for each image box
+        $(this).find(".cstm-img-box").each(function() {
+            const imageUrl = $(this).data('image-url');
+            $(this).css('background-image', `url('${imageUrl}')`);
+        });
 
-    $(".cstm-img-box").mouseover(function() {
-        $(".cstm-img-box").removeClass("expand");
-        $(this).addClass("expand");
-    });
+        // Set the first image box to be expanded by default
+        $(this).find(".cstm-img-box:first").addClass("expand");
 
-    $(".cstm-img-box").mouseout(function() {
-        // Check if the mouse is not over any image box and reapply expand to the first box
-        if ($(".cstm-img-box.expand").length === 0) {
-            $(".cstm-img-box:first").addClass("expand");
-        }
-    });
+        $(this).find(".cstm-img-box").mouseover(function() {
+            $(this).siblings().removeClass("expand");
+            $(this).addClass("expand");
+        });
 
-    // Ensure the first box is expanded when the mouse leaves the gallery
-    $(".cstm-gallery").mouseleave(function() {
-        $(".cstm-img-box").removeClass("expand");
-        $(".cstm-img-box:first").addClass("expand");
+        $(this).find(".cstm-img-box").mouseout(function() {
+            // Reapply expand to the first box if no box is hovered
+            if ($(this).siblings(".expand").length === 0) {
+                $(this).siblings().removeClass("expand");
+                $(this).siblings().first().addClass("expand");
+            }
+        });
+
+        // Ensure the first box is expanded when the mouse leaves the gallery
+        $(this).mouseleave(function() {
+            $(this).find(".cstm-img-box").removeClass("expand");
+            $(this).find(".cstm-img-box:first").addClass("expand");
+        });
     });
 });
 // function onClick(element) {

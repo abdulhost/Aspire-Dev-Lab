@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="path/to/your/styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Image Gallery</title>
     <style>
@@ -11,68 +10,74 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-bottom: 20px; /* Space between galleries */
         }
 
         .cstm-img-box {
-            width: 100px;
+            width: 100px; /* Initial width for all boxes */
             height: 200px;
             margin: 10px;
             border-radius: 8px;
-            background: url('/images/renal-warrior.png');
             background-size: cover;
             background-position: center;
             position: relative;
             transition: width 0.5s;
-            opacity: 0.7; /* Optional: Make them slightly transparent */
-        }
-
-        .cstm-img-box:nth-child(2) {
-            background: url('/images/flaxen.png');
-        }
-        .cstm-img-box:nth-child(3) {
-            background: url('/images/flaxen.png');
         }
 
         .cstm-img-box.expand {
-            /* opacity: 1; */
-            width: 300px;
-        }
-
-        .cstm-img-box:not(.expand) {
-            /* opacity: 0; */
+            width: 300px; /* Expanded width */
         }
     </style>
 </head>
 <body>
-    <div class="cstm-gallery">
-        <div class="cstm-img-box w3-hover-opacity" onclick="onClick(this)"></div>
-        <div class="cstm-img-box w3-hover-opacity" onclick="onClick(this)"></div>
-        <div class="cstm-img-box w3-hover-opacity" onclick="onClick(this)"></div>
+    <div class="cstm-gallery" data-gallery-id="gallery1">
+        <div class="cstm-img-box" data-image-url="/images/renal-warrior.png" onclick="onClick(this)"></div>
+        <div class="cstm-img-box" data-image-url="/images/flaxen.png" onclick="onClick(this)"></div>
+        <div class="cstm-img-box" data-image-url="/images/flaxen.png" onclick="onClick(this)"></div>
+    </div>
+    
+    <div class="cstm-gallery" data-gallery-id="gallery2">
+        <div class="cstm-img-box" data-image-url="/images/renal-warrior.png" onclick="onClick(this)"></div>
+        <div class="cstm-img-box" data-image-url="/images/renal-warrior.png" onclick="onClick(this)"></div>
+        <div class="cstm-img-box" data-image-url="/images/renal-warrior.png" onclick="onClick(this)"></div>
     </div>
 
     <script>
         $(document).ready(function() {
-            // Set the first image box to be expanded by default
-            $(".cstm-img-box:first").addClass("expand");
+            $(".cstm-gallery").each(function() {
+                // Set the background for each image box
+                $(this).find(".cstm-img-box").each(function() {
+                    const imageUrl = $(this).data('image-url');
+                    $(this).css('background-image', `url('${imageUrl}')`);
+                });
 
-            $(".cstm-img-box").mouseover(function() {
-                $(".cstm-img-box").removeClass("expand");
-                $(this).addClass("expand");
-            });
+                // Set the first image box to be expanded by default
+                $(this).find(".cstm-img-box:first").addClass("expand");
 
-            $(".cstm-img-box").mouseout(function() {
-                // Check if the mouse is not over any image box and reapply expand to the first box
-                if ($(".cstm-img-box.expand").length === 0) {
-                    $(".cstm-img-box:first").addClass("expand");
-                }
-            });
+                $(this).find(".cstm-img-box").mouseover(function() {
+                    $(this).siblings().removeClass("expand");
+                    $(this).addClass("expand");
+                });
 
-            // Ensure the first box is expanded when the mouse leaves the gallery
-            $(".cstm-gallery").mouseleave(function() {
-                $(".cstm-img-box").removeClass("expand");
-                $(".cstm-img-box:first").addClass("expand");
+                $(this).find(".cstm-img-box").mouseout(function() {
+                    // Reapply expand to the first box if no box is hovered
+                    if ($(this).siblings(".expand").length === 0) {
+                        $(this).siblings().removeClass("expand");
+                        $(this).siblings().first().addClass("expand");
+                    }
+                });
+
+                // Ensure the first box is expanded when the mouse leaves the gallery
+                $(this).mouseleave(function() {
+                    $(this).find(".cstm-img-box").removeClass("expand");
+                    $(this).find(".cstm-img-box:first").addClass("expand");
+                });
             });
         });
+
+        function onClick(box) {
+            alert(`Image clicked: ${$(box).data('image-url')}`);
+        }
     </script>
 </body>
 </html>

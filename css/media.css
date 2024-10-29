@@ -1,0 +1,40 @@
+@media (max-width: 770px) {
+    .projects.container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .cstm-img-box {
+        height: 124px;
+    }
+
+    .card-body {
+        padding: 0.5rem;
+    }
+}
+
+
+@media (max-width: 428px) {
+    .services .custom-radius {
+        text-align: center;
+    }
+
+    .custom-direction {
+        flex-direction: column;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .projects.container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .card-body {
+        padding: 1.25rem;
+    }
+    .list-group-flush {
+        text-align: center;
+    }
+}

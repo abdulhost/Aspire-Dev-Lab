@@ -8,6 +8,7 @@
     <title>Home | Aspire Dev Lab</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css"> <!-- Link to your external CSS -->
+    <link rel="stylesheet" href="css/media.css"> <!-- Link to your external CSS -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -49,10 +50,10 @@
     </section>
 
     <div class="container mt-5">
-        <div class="row text-center">
+        <div class="row text-center custom-row-gap">
             <div class="col-md-4">
                 <div class="card price-table">
-                    <div class="card-body">
+                    <div class="card-body" style="justify-content: space-between;">
                         <div class="card-start">
                             <h5 class="card-title">Single-Page Static Website</h5>
                             <p class="plan-price">₹3500</p>
@@ -82,7 +83,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card price-table highlight">
-                    <div class="card-body">
+                    <div class="card-body" style="justify-content: space-between;">
                         <div class="card-start">
                             <h5 class="card-title">Static Website</h5>
                             <p class="plan-price">₹6500</p>
@@ -110,7 +111,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card price-table">
-                    <div class="card-body">
+                    <div class="card-body" style="justify-content: space-between;">
                         <div class="card-start">
                             <h5 class="card-title">Dynamic Website</h5>
                             <p class="plan-price">₹9500</p>
@@ -166,7 +167,8 @@
                         <p>Automate tasks, data scraping, or get <strong>No-Copyright Data in Bulk</strong>.
                             <strong>Bulk Whatsapp Messaging Webapp</strong> (following all WhatsApp policy to avoid
                             ban). <strong>Bulk Email Webapp</strong> (specially for cold mails and promotions). Order
-                            today!</p>
+                            today!
+                        </p>
                     </a>
                 </div>
                 <div class="col-md-4 d-flex">
@@ -192,61 +194,278 @@
 
 
 
-    <div class="container mt-5">
-        <div class="row">
+    <div class="projects container mt-5 text-center ">
+        <div class="row custom-row-gap">
+            <div class="col-md-8  ">
+                <div class=" card text-center service-item pb-3">
+                    <h4 class="card-title font-weight-bold">Bussiness Website(Graphic Design)</h4>
+
+                    <div class="d-flex custom-direction">
+                        <div class="left">
+                            <!-- <img src="/images/flaxen.png" class="card-img-top w3-hover-opacity"
+                                style="width:100%;cursor:pointer" onclick="onClick(this)" alt="Product 1"> -->
+                            <div class="cstm-gallery" data-gallery-id="gallery1">
+                                <div class="cstm-img-box" data-image-url="/images/flaxen.png" onclick="onClick(this)">
+                                </div>
+                                <div class="cstm-img-box" data-image-url="/images/flaxen.png" onclick="onClick(this)">
+                                </div>
+                                <div class="cstm-img-box" data-image-url="/images/flaxen.png" onclick="onClick(this)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex  align-items-center p-1">
+                                    <span>Developed custom PHP functionalities for enhanced user interaction.</span>
+                                    <span class="badge badge-primary badge-pill">PHP</span>
+                                </li>
+                                <li class="list-group-item d-flex  align-items-center p-1">
+                                    <span>Implemented a Custom RSS Feed for design updates, boosting engagement.</span>
+                                    <span class="badge badge-info badge-pill">RSS</span>
+                                </li>
+                                <li class="list-group-item d-flex  align-items-center p-1">
+                                    <span>Hosted on Hostinger for reliable performance.</span>
+                                    <span class="badge badge-success badge-pill">Hosting</span>
+                                </li>
+                                <li class="list-group-item d-flex  align-items-center p-1">
+                                    <span>Ensured responsive design for optimal viewing on all devices.</span>
+                                    <span class="badge badge-warning badge-pill">Responsive</span>
+                                </li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary mx-4">View Details</a>
+                </div>
+            </div>
             <div class="col-md-4 ">
                 <div class="card text-center service-item">
-                    <img src="/images/flaxen.png" class="card-img-top w3-hover-opacity"
-                        style="width:100%;cursor:pointer" onclick="onClick(this)" alt="Product 1">
+                    <!-- <img src="/images/renal-warrior.png" class="card-img-top w3-hover-opacity"
+                        style="width:100%;cursor:pointer" onclick="onClick(this)" alt="Product 2"> -->
+                    <div class="cstm-gallery" data-gallery-id="gallery1">
+                        <div class="cstm-img-box" data-image-url="/images/renal-warrior.png" onclick="onClick(this)">
+                        </div>
+                        <div class="cstm-img-box" data-image-url="/images/Image2.jpeg" onclick="onClick(this)"></div>
+                        <div class="cstm-img-box" data-image-url="/images/Image3.jpeg" onclick="onClick(this)"></div>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title font-weight-bold">Blog Website(Heatlh Blogs)</h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex  align-items-center p-1">
+                                <span>Custom PHP features for improved user interaction.</span>
+                                <span class="badge badge-primary badge-pill">PHP <br> Wordpress</span>
+                            </li>
 
-                    <div class="card-body">
-                        <h5 class="card-title">Bussiness Website(Graphic Design)</h5>
-                        <p class="card-text">This is a short description of Product 1. It offers great features and
-                            benefits.</p>
+                            <li class="list-group-item d-flex  align-items-center p-1">
+                                <span>Responsive design for all devices.</span>
+                                <span class="badge badge-warning badge-pill">Responsive</span>
+                            </li>
+                        </ul>
+
                         <a href="#" class="btn btn-primary">View Details</a>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-4">
                 <div class="card text-center service-item">
-                    <img src="/images/renal-warrior.png" class="card-img-top w3-hover-opacity"
-                        style="width:100%;cursor:pointer" onclick="onClick(this)" alt="Product 2">
+                    <!-- <img src="/images/flaxen.png" class="card-img-top w3-hover-opacity" style="width:100%;cursor:pointer"
+                        onclick="onClick(this)" alt="Product 3"> -->
+                    <div class="cstm-gallery" data-gallery-id="gallery1">
+                        <div class="cstm-img-box" data-image-url="/images/whatsapp-sending.png" onclick="onClick(this)">
+                        </div>
+                        <!-- <div class="cstm-img-box" data-image-url="/images/Image2.jpeg" onclick="onClick(this)"></div>
+                            <div class="cstm-img-box" data-image-url="/images/Image3.jpeg" onclick="onClick(this)"></div> -->
+                    </div>
                     <div class="card-body">
-                        <h5 class="card-title">Blog Website(Heatlh Blogs)</h5>
-                        <p class="card-text">This is a short description of Product 2. It offers great features and
-                            benefits.</p>
+                        <h4 class="card-title font-weight-bold">Intelligent WhatsApp Messaging Automation in Python
+                        </h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex  align-items-center p-1">
+                                <span>Python tool for WhatsApp messaging.</span>
+                                <span class="badge badge-primary badge-pill">Python</span>
+                            </li>
+                            <li class="list-group-item d-flex  align-items-center p-1">
+                                <span>Bulk messaging without bans.</span>
+                                <span class="badge badge-info badge-pill">Intelligence</span>
+                            </li>
+                            <li class="list-group-item d-flex  align-items-center p-1">
+                                <span>Send more than 500 emoji messages quickly.</span>
+                                <span class="badge badge-success badge-pill">Customization</span>
+                            </li>
+                            <li class="list-group-item d-flex  align-items-center p-1">
+                                <span>No APIs needed.</span>
+                                <span class="badge badge-warning badge-pill">No API</span>
+                            </li>
+                        </ul>
+
+
+
+
                         <a href="#" class="btn btn-primary">View Details</a>
                     </div>
                 </div>
             </div>
+            <!-- <div class="row custom-row-gap" style="width: 66%; "> style="max-width: 100%; flex:0 0 100%"-->
+            <div class="col-md-8 ">
+                <div class=" card text-center service-item pb-3 ">
+                    <h4 class="card-title font-weight-bold">FlatMatch- Flask WebApp</h4>
+                    <div class="d-flex custom-direction">
+                        <div class="left">
+                            <!-- <img src="/images/flaxen.png" class="card-img-top w3-hover-opacity"
+                                style="width:100%;cursor:pointer" onclick="onClick(this)" alt="Product 1"> -->
+                            <div class="cstm-gallery" data-gallery-id="gallery1">
+                                <div class="cstm-img-box" data-image-url="/images/Home-FlatMatch -1.png"
+                                    onclick="onClick(this)"></div>
+                                <div class="cstm-img-box" data-image-url="/images/Home-FlatMatch -4.png"
+                                    onclick="onClick(this)"></div>
+                                <div class="cstm-img-box" data-image-url="/images/Home-FlatMatch -5.png"
+                                    onclick="onClick(this)"></div>
+                            </div>
+                        </div>
+                        <div class="right card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex  align-items-center p-1">
+                                    <span>Developed FlatMatch, a Flask web app for easy room and roommate
+                                        searches.</span>
+                                    <span class="badge badge-primary badge-pill">Development</span>
+                                </li>
+                                <li class="list-group-item d-flex  align-items-center p-1">
+                                    <span>Integrated Bing Maps API for better location accuracy.</span>
+                                    <span class="badge badge-info badge-pill">Integration</span>
+                                </li>
+                                <li class="list-group-item d-flex  align-items-center p-1">
+                                    <span>Ensured data security with hashed password authentication and profile
+                                        management.</span>
+                                    <span class="badge badge-success badge-pill">Security</span>
+                                </li>
+                                <li class="list-group-item d-flex  align-items-center p-1">
+                                    <span>Applied responsive design for optimal performance on all devices.</span>
+                                    <span class="badge badge-warning badge-pill">Responsive</span>
+                                </li>
+                                <li class="list-group-item d-flex  align-items-center p-1">
+                                    <span>Allowed PG and flat owners to post
+
+
+
+
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary mx-4">View Details</a>
+                </div>
+            </div>
+            <div class="col-md-8 ">
+                <div class=" card text-center service-item pb-3">
+                    <h4 class="card-title font-weight-bold">Doctor Appointment Management System</h4>
+                    <div class="d-flex custom-direction">
+                        <div class="left">
+                            <!-- <img src="/images/flaxen.png" class="card-img-top w3-hover-opacity"
+                                style="width:100%;cursor:pointer" onclick="onClick(this)" alt="Product 1"> -->
+                            <div class="cstm-gallery" data-gallery-id="gallery1">
+                                <div class="cstm-img-box" data-image-url="/images/doc1.png" onclick="onClick(this)">
+                                </div>
+                                <div class="cstm-img-box" data-image-url="/images/doc2.png" onclick="onClick(this)">
+                                </div>
+                                <div class="cstm-img-box" data-image-url="/images/doc4.png" onclick="onClick(this)">
+                                </div>
+                                <div class="cstm-img-box" data-image-url="/images/doc3.png" onclick="onClick(this)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex  align-items-center p-1">
+                                    <span>Developed a Flask-based web app for efficient doctor appointment
+                                        scheduling.</span>
+                                    <span class="badge badge-primary badge-pill">Flask</span>
+                                </li>
+                                <li class="list-group-item d-flex  align-items-center p-1">
+                                    <span>Implemented features like admin login for secure management and appointment
+                                        filtering.</span>
+                                    <span class="badge badge-info badge-pill">Admin Features</span>
+                                </li>
+                                <li class="list-group-item d-flex  align-items-center p-1">
+                                    <span>Integrated WhatsApp notifications to keep patients informed about their
+                                        appointments.</span>
+                                    <span class="badge badge-success badge-pill">Notifications</span>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary mx-4">View Details</a>
+                </div>
+            </div>
+
+            <!-- </div> -->
             <div class="col-md-4">
                 <div class="card text-center service-item">
-                    <img src="image3.jpg" class="card-img-top w3-hover-opacity" style="width:100%;cursor:pointer"
-                        onclick="onClick(this)" alt="Product 3">
+                    <div class="cstm-gallery" data-gallery-id="gallery1">
+                        <div class="cstm-img-box" data-image-url="/images/mission muskan.png" onclick="onClick(this)">
+                        </div>
+                        <!-- <div class="cstm-img-box" data-image-url="/images/Image2.jpeg" onclick="onClick(this)"></div>
+                        <div class="cstm-img-box" data-image-url="/images/Image3.jpeg" onclick="onClick(this)"></div> -->
+                    </div>
                     <div class="card-body">
-                        <h5 class="card-title">Product 3</h5>
-                        <p class="card-text">This is a short description of Product 3. It offers great features and
-                            benefits.</p>
+                        <h4 class="card-title font-weight-bold">NGO Website</h4>
+                        <ul class="list-group list-group-flush">
+
+                            <li class="list-group-item d-flex  align-items-center p-1">
+                                <span>Features donation management and volunteer sign-up.</span>
+                                <span class="badge badge-info badge-pill">Functionality</span>
+                            </li>
+
+                            <li class="list-group-item d-flex  align-items-center p-1">
+                                <span>Showcases projects and impact stories to inspire action.</span>
+                                <span class="badge badge-secondary badge-pill">Community<br> Impact</span>
+                            </li>
+                        </ul>
+
+
                         <a href="#" class="btn btn-primary">View Details</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card text-center service-item">
-                    <div class="cstm-gallery">
-                        <div class="cstm-img-box " onclick="onClick(this)"></div>
-                        <div class="cstm-img-box " onclick="onClick(this)"></div>
-                        <div class="cstm-img-box" onclick="onClick(this)"></div>
+            <div class="col-md-8 ">
+                <div class=" card text-center service-item pb-3">
+                    <h4 class="card-title font-weight-bold">Legal Advisory Platform</h4>
+                    <div class="d-flex custom-direction">
+                        <div class="left">
+                            <!-- <img src="/images/flaxen.png" class="card-img-top w3-hover-opacity"
+                                style="width:100%;cursor:pointer" onclick="onClick(this)" alt="Product 1"> -->
+                            <div class="cstm-gallery" data-gallery-id="gallery1">
+                                <div class="cstm-img-box" data-image-url="/images/bollen.png" onclick="onClick(this)">
+                                </div>
+                                <!-- <div class="cstm-img-box" data-image-url="/images/doc2.png" onclick="onClick(this)"></div>
+                                    <div class="cstm-img-box" data-image-url="/images/doc4.png" onclick="onClick(this)"></div> -->
+                            </div>
+                        </div>
+                        <div class="right card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex  align-items-center p-1">
+                                    <span>Hosted on Google Cloud VPS for reliable performance and scalability.</span>
+                                    <span class="badge badge-primary badge-pill">Flask <br>Google Cloud</span>
+                                </li>
+                                <li class="list-group-item d-flex  align-items-center p-1">
+                                    <span>Features online ID card and certificate of Franchise generation for client
+                                        convenience.</span>
+                                    <span class="badge badge-info badge-pill">Functionality</span>
+                                </li>
+
+                                <li class="list-group-item d-flex  align-items-center p-1">
+                                    <span>Provides legal resources and guidance tailored for individual and business
+                                        needs.</span>
+                                    <span class="badge badge-secondary badge-pill">Legal Services</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Product 4</h5>
-                        <p class="card-text">This is a short description of Product 3. It offers great features and
-                            benefits.</p>
-                        <a href="#" class="btn btn-primary">View Details</a>
-                    </div>
+                    <a href="#" class="btn btn-primary mx-4">View Details</a>
                 </div>
             </div>
         </div>
+        <a href="#" class="btn btn-primary mx-4 " style="margin: 1rem;">Explore Our More Works</a>
     </div>
 
     <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
@@ -255,6 +474,9 @@
             <img id="img01" style="width:100%">
         </div>
     </div>
+
+
+
 
     <footer class="bg-dark text-white mt-2 p-4 text-center">
         <p>&copy; 2024 Aspire Dev Lab | All Rights Reserved</p>
